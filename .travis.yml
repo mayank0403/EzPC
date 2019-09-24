@@ -1,5 +1,8 @@
 compiler: g++
 
+before_install:
+  - gem install rake
+
 # This is only for Porthos right now
 # install Porthos dependencies
 install:
