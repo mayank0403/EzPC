@@ -1,0 +1,12 @@
+compiler: gcc
+
+# This is only for Porthos right now
+# install Porthos dependencies
+before_install:
+  - "sudo apt-get -y install libssl-dev g++ make"
+  - "cd Porthos/
+    && ./setup-eigen.sh
+    && make clean && make -j"
+
+# install dependencies
+install: make get-deps
