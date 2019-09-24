@@ -4,7 +4,7 @@ compiler: g++
 
 before_install:
   # Codecov
-  - sudo pip install codecov
+  - "sudo pip install codecov"
 
 # This is only for Porthos right now
 # install Porthos dependencies
@@ -16,10 +16,10 @@ install:
 script:
   - "make clean && make -j"
   - "chmod +x get_code_cov"
-  - ./get_code_cov
-  - codecov
+  - "./get_code_cov"
+  - "codecov"
   
   after_success:
   # Codecov
-  - bash <(curl -s https://codecov.io/bash)
+  - "bash <(curl -s https://codecov.io/bash)"
 
