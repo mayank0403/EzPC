@@ -17,6 +17,7 @@ install:
     
 script:
   - "make clean && make -j"
+  - "chmod +x get_code_cov"
   - ./get_code_cov
   - codecov
   
