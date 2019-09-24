@@ -1,4 +1,4 @@
-compiler: gcc
+compiler: g++
 
 # This is only for Porthos right now
 # install Porthos dependencies
