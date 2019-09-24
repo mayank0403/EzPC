@@ -1,13 +1,16 @@
-compiler: g++
+language: python
+python:
+  - "3.6"
 
-before_install:
-  - gem install rake
+compiler: g++
 
 # This is only for Porthos right now
 # install Porthos dependencies
 install:
   - "sudo apt-get -y install libssl-dev g++ make"
   - "cd Porthos/
-    && ./setup-eigen.sh
-    && make clean && make -j"
+    && ./setup-eigen.sh"
+    
+script:
+  - "make clean && make -j"
 
